@@ -33,7 +33,7 @@ const Map = ({ onLocationSave }) => {
     const handleSaveLocation = () => {
         if (address && coordinates) {
             axios
-                .post('http://localhost:5001/save-location', { address, coordinates })
+                .post('https://locationmap.onrender.com', { address, coordinates })
                 .then((response) => {
                     alert('Location saved successfully!');
                     onLocationSave(address);
